@@ -1,0 +1,236 @@
+.shared-button{
+
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 2px;
+
+    &:hover{
+        cursor: pointer;
+        opacity: .7;
+    }
+
+    svg{
+        padding: 2px; 
+    }
+
+    span {
+        padding: 4px;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: 200;
+
+    }
+}
+// Vertical Layout
+.vertical{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10px 0;
+    align-items: center;
+    width: 100%;
+
+    .social-media{
+        display: flex;
+        border: none;
+        width: 100px;
+        padding: 7px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        justify-content: flex-start;
+
+        &:hover{
+            cursor: pointer;
+            opacity: .7;
+        }
+
+        &:last-child{
+            margin-bottom: 0px;
+        }
+
+    }   
+    
+    .txtBtn {
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: 300; 
+    }
+
+    svg {
+        width: 15px;
+        padding-right: 5px;
+        fill: #fff;
+        display: flex;
+        
+    }
+}
+// Horizontal Layout
+.horizontal{
+    display: flex;
+    margin: 0 0 10px 0;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 2px 2px 4px 2px rgb(0 0 0 / 20%);
+
+    .social-media{
+        
+        border: none;
+        width: 50px;
+        padding: 7px;
+        border-radius: 5px;
+        margin: 2px 4px 2px 4px;
+        transition: transform .2s;
+
+        &:hover{
+            cursor: pointer;
+        }
+        
+    }   
+
+    svg{
+        width: 20px;
+        fill: #FFF; 
+    }
+
+    .txtBtn{
+        display: none;
+    }
+}
+// Neutral Theme
+.neutral{
+    &.vertical{
+        button:nth-child(3n+1){
+            background-color: #646464;
+        }
+        button:nth-child(3n+2){
+            background-color: #7f8080;
+        }
+        button:nth-child(3n){
+            background-color: #545554;
+        }
+    }
+
+    &.horizontal .social-media{
+
+        background:none;
+        margin: 0;
+
+        button{
+            background:none;
+        }
+
+        svg {
+            width: 15px;
+            fill: #747272;
+        }
+    }
+}
+
+::ng-deep div.mat-menu-panel {
+    background-color: transparent;
+    box-shadow: none;
+    max-width: none;
+  }
+::ng-deep button.mat-menu-item {
+    align-items: center;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    span{
+        display: flex;
+    }
+  }
+
+// Tooltip
+.tooltiptext{
+    &.vertical{
+        margin: 0;
+        padding: 10px;
+        border-radius: 3%;
+        width: fit-content;
+        position: absolute;
+        background-color: #fff;
+        z-index: 1;
+        box-shadow: 2px 2px 4px 2px rgb(0 0 0 / 20%);
+    }
+}
+.vertical::after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 10%;
+    margin-left: -6px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:  transparent transparent #fff transparent;
+}
+
+.vertical[_ngcontent-oyx-c44] .social-media[_ngcontent-oyx-c44]:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.vertical[_ngcontent-oyx-c44] .social-media[_ngcontent-oyx-c44] {
+    display: flex;
+    border: none;
+    width: 100px;
+    padding: 7px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    justify-content: flex-start;
+}
+.tooltiptext button:hover {
+    background-color: rgba(123, 152, 185, 0.5);
+}
+
+// Social Media classes
+.facebook{
+    background-color: #4165b0;
+}
+.twitter{
+    background-color: #00a7e3;
+}
+.linkedin{
+    background-color: #006ea4;
+}
+.pinterest{
+    background-color: #b80918;
+}
+.whatsApp{
+    background-color: #22d75f;
+}
+.weChat{
+    background-color: #2dc100;
+}
+.weibo{
+    background-color: #c2981a;
+    fill: red;
+}
+.reddit{
+    background-color: #ff3c0d;
+}
+.tumblr{
+    background-color: #35465c;
+}
+.messenger{
+    background-color: #0080f8;
+}
+.telegram{
+    background-color: #008cc2;
+}
+.messages{
+    background-color: #15c66c;
+}
+.email{
+    background-color: #ff902c;
+}
+.copylink{
+    background-color: #5a7f88;
+}
+.print{
+    background-color: #5a7f88;
+}
